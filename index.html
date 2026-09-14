@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Hamza Fatih | حمزه فاتح</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f1e8;
+    color:#26352d;
+    line-height:1.8;
+}
+
+header{
+    background:linear-gradient(135deg,#173b2b,#285a43);
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.logo{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+header h1{
+    font-size:36px;
+    margin-bottom:5px;
+}
+
+header p{
+    font-size:17px;
+    opacity:.9;
+}
+
+nav{
+    background:#102d21;
+    padding:14px 8px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 9px;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#d6b45a;
+}
+
+.welcome{
+    text-align:center;
+    padding:45px 20px 25px;
+}
+
+.welcome h2{
+    color:#173b2b;
+    font-size:29px;
+    margin-bottom:10px;
+}
+
+.welcome p{
+    color:#666;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    border:1px solid #e4ddcd;
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    color:#173b2b;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#777;
+    font-size:14px;
+}
+
+.section{
+    padding:45px 0;
+}
+
+.section-title{
+    text-align:center;
+    color:#173b2b;
+    font-size:27px;
+    margin-bottom:25px;
+}
+
+.about{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.about p{
+    margin:10px 0;
+}
+
+footer{
+    background:#102d21;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+    margin-top:30px;
+}
+
+footer strong{
+    color:#d6b45a;
+}
+
+@media(max-width:600px){
+    .logo{
+        font-size:38px;
+    }
+
+    header h1{
+        font-size:29px;
+    }
+
+    nav a{
+        font-size:13px;
+        margin:0 4px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">☪</div>
+    <h1>حمزه فاتح</h1>
+    <p>Hamza Fatih</p>
+    <p>اسلامي علمي او نشراتي ویب پاڼه</p>
+</header>
+
+<nav>
+    <a href="#home">کور</a>
+    <a href="#books">PDF کتابونه</a>
+    <a href="#tafsir">تفسیر</a>
+    <a href="#publications">اسلامي نشرات</a>
+    <a href="#audio">صوتي مواد</a>
+    <a href="#about">زموږ په اړه</a>
+</nav>
+
+<section class="welcome" id="home">
+    <h2>بسم الله الرحمن الرحيم</h2>
+    <p>
+        د اسلامي علم، کتابونو، قرآنکریم تفسیر او ګټورو اسلامي موادو مرکز
+    </p>
+</section>
+
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card" id="books">
+            <div class="icon">📚</div>
+            <h3>PDF کتابونه</h3>
+            <p>اسلامي کتابونه او علمي مطالب</p>
+        </div>
+
+        <div class="card" id="tafsir">
+            <div class="icon">🎧</div>
+            <h3>د قرآنکریم تفسیر</h3>
+            <p>د حافظ فضل صاحب د قرآنکریم تفسیر</p>
+        </div>
+
+        <div class="card" id="publications">
+            <div class="icon">📖</div>
+            <h3>اسلامي نشرات</h3>
+            <p>اسلامي مقالې، لیکنې او نور ګټور مواد</p>
+        </div>
+
+        <div class="card" id="audio">
+            <div class="icon">🎙️</div>
+            <h3>صوتي مواد</h3>
+            <p>بیانونه، درسونه او نور صوتي مواد</p>
+        </div>
+
+    </div>
+
+    <section class="section" id="about">
+
+        <h2 class="section-title">
+            د حمزه فاتح ویب پاڼه
+        </h2>
+
+        <div class="about">
+
+            <p>ښه راغلاست! 🌿</p>
+
+            <p>
+                دا ویب پاڼه د اسلامي کتابونو، قرآنکریم تفسیر،
+                اسلامي نشراتو او نورو ګټورو اسلامي موادو
+                د خپرولو لپاره جوړیږي.
+            </p>
+
+            <p>
+                <strong>Hamza Fatih</strong>
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+
+    <p>© 2026 <strong>Hamza Fatih</strong></p>
+
+    <p>ټول حقوق خوندي دي</p>
+
+</footer>
+
+</body>
+</html>
