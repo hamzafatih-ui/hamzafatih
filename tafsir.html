@@ -2,20 +2,401 @@
 <html lang="ps" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>د قرآنکریم تفسیر</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>د قرآنکریم تفسیر | Hamza Fatih</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Tahoma,sans-serif;
+    background:#f4f1e8;
+    color:#24352c;
+    line-height:1.8;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(135deg,#09251b,#1e5a40);
+    color:white;
+    text-align:center;
+    padding:45px 20px 35px;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+    margin:auto;
+    border:2px solid #d7b65a;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:42px;
+    color:#d7b65a;
+}
+
+header h1{
+    margin-top:15px;
+    font-size:32px;
+}
+
+.subtitle{
+    color:#e5d59b;
+    margin-top:5px;
+}
+
+/* Navigation */
+
+nav{
+    background:#061b14;
+    text-align:center;
+    padding:12px 5px;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    padding:7px 12px;
+    margin:3px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+nav a:hover{
+    background:#16452f;
+    color:#d7b65a;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:45px 20px 25px;
+}
+
+.hero h2{
+    color:#16452f;
+    font-size:27px;
+}
+
+.hero p{
+    color:#777;
+    margin-top:8px;
+}
+
+/* Main */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+/* Intro */
+
+.intro{
+    background:white;
+    border-radius:22px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    border:1px solid #e1d8c5;
+}
+
+.intro h2{
+    color:#16452f;
+    margin-bottom:8px;
+}
+
+.intro p{
+    color:#666;
+}
+
+/* Parts */
+
+.parts-title{
+    text-align:center;
+    margin:45px 0 20px;
+    color:#16452f;
+}
+
+.parts{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.part{
+    background:white;
+    border-radius:20px;
+    padding:25px 18px;
+    text-align:center;
+    border:1px solid #e2dac8;
+    box-shadow:0 6px 18px rgba(0,0,0,.07);
+    transition:.2s;
+}
+
+.part:hover{
+    transform:translateY(-4px);
+}
+
+.part .number{
+    width:55px;
+    height:55px;
+    margin:auto;
+    border-radius:50%;
+    background:#16452f;
+    color:#d7b65a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.part h3{
+    margin-top:12px;
+    color:#16452f;
+}
+
+.part p{
+    color:#777;
+    font-size:14px;
+    margin-top:5px;
+}
+
+.listen{
+    display:inline-block;
+    margin-top:15px;
+    padding:8px 20px;
+    background:#16452f;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+}
+
+.listen:hover{
+    background:#1e5a40;
+}
+
+/* Back button */
+
+.back{
+    text-align:center;
+    margin:40px 0 10px;
+}
+
+.back a{
+    display:inline-block;
+    background:#d7b65a;
+    color:#09251b;
+    text-decoration:none;
+    padding:10px 25px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+    margin-top:50px;
+    background:#09251b;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+footer strong{
+    color:#d7b65a;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    nav a{
+        font-size:12px;
+        padding:5px 7px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>🎧 د قرآنکریم تفسیر</h1>
+<header>
 
-<h2>د حافظ فضل صاحب تفسیر</h2>
+    <div class="logo">☪</div>
 
-<p>ښه راغلاست!</p>
+    <h1>د قرآنکریم تفسیر</h1>
 
-<p>دا د قرآنکریم د تفسیر پاڼه ده.</p>
+    <div class="subtitle">
+        Hamza Fatih | حمزه فاتح
+    </div>
 
-<a href="index.html">🏠 بېرته کور ته</a>
+</header>
+
+<nav>
+
+    <a href="index.html">🏠 کور</a>
+
+    <a href="index.html#books">📚 کتابونه</a>
+
+    <a href="tafsir.html">🎧 تفسیر</a>
+
+    <a href="index.html#audio">🎙️ صوتي مواد</a>
+
+    <a href="index.html#articles">📝 مقالې</a>
+
+</nav>
+
+<section class="hero">
+
+    <h2>بسم الله الرحمن الرحيم</h2>
+
+    <p>
+        د حافظ فضل صاحب د قرآنکریم د تفسیر صوتي مجموعه
+    </p>
+
+</section>
+
+<div class="container">
+
+    <div class="intro">
+
+        <h2>📖 د قرآنکریم تفسیر</h2>
+
+        <p>
+            دلته به د حافظ فضل صاحب د قرآنکریم تفسیر
+            په منظم ډول د سورتونو او برخو له مخې وړاندې کېږي.
+        </p>
+
+    </div>
+
+
+    <h2 class="parts-title">
+        🎧 د تفسیر برخې
+    </h2>
+
+
+    <div class="parts">
+
+
+        <div class="part">
+
+            <div class="number">01</div>
+
+            <h3>مقدمه</h3>
+
+            <p>
+                د تفسیر مقدمه او لومړني معلومات
+            </p>
+
+            <a href="#" class="listen">
+                ▶ اورېدل
+            </a>
+
+        </div>
+
+
+        <div class="part">
+
+            <div class="number">02</div>
+
+            <h3>سورة الفاتحة</h3>
+
+            <p>
+                د سورة الفاتحة تفسیر
+            </p>
+
+            <a href="#" class="listen">
+                ▶ اورېدل
+            </a>
+
+        </div>
+
+
+        <div class="part">
+
+            <div class="number">03</div>
+
+            <h3>سورة البقرة</h3>
+
+            <p>
+                د سورة البقرة تفسیر
+            </p>
+
+            <a href="#" class="listen">
+                ▶ اورېدل
+            </a>
+
+        </div>
+
+
+        <div class="part">
+
+            <div class="number">04</div>
+
+            <h3>نور سورتونه</h3>
+
+            <p>
+                د قرآنکریم نور سورتونه
+            </p>
+
+            <a href="#" class="listen">
+                ▶ اورېدل
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="back">
+
+        <a href="index.html">
+            🏠 بېرته اصلي پاڼې ته
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        © 2026 <strong>Hamza Fatih</strong>
+    </p>
+
+    <p>
+        د قرآنکریم او اسلامي علم د خپرولو لپاره
+    </p>
+
+</footer>
 
 </body>
 </html>
