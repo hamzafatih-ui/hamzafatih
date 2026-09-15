@@ -187,10 +187,54 @@ nav a:hover{
     color:white;
     text-decoration:none;
     border-radius:25px;
+    border:none;
+    cursor:pointer;
+    font-size:15px;
 }
 
 .listen:hover{
     background:#1e5a40;
+}
+
+/* Download */
+
+.download{
+    display:inline-block;
+    margin-top:8px;
+    padding:6px 15px;
+    background:#d7b65a;
+    color:#09251b;
+    text-decoration:none;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* Audio Player */
+
+.player-box{
+    background:#09251b;
+    border-radius:22px;
+    padding:20px;
+    margin:30px 0;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.12);
+}
+
+.player-box h3{
+    color:#d7b65a;
+    margin-bottom:10px;
+}
+
+.player-box p{
+    color:white;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.player-box audio{
+    width:100%;
+    max-width:700px;
 }
 
 /* Back button */
@@ -291,91 +335,33 @@ footer strong{
         <h2>📖 د قرآنکریم تفسیر</h2>
 
         <p>
-            دلته به د حافظ فضل صاحب د قرآنکریم تفسیر
-            په منظم ډول د سورتونو او برخو له مخې وړاندې کېږي.
+            دلته د حافظ فضل صاحب د قرآنکریم تفسیر
+            ټولې ۲۰۵ صوتي برخې په منظم ډول وړاندې کېږي.
         </p>
 
     </div>
 
+    <!-- Audio Player -->
 
-    <h2 class="parts-title">
-        🎧 د تفسیر برخې
-    </h2>
+    <div class="player-box">
 
+        <h3>🎧 د تفسیر غږیز پلیر</h3>
 
-    <div class="parts">
+        <p id="nowPlaying">
+            د اورېدو لپاره له لاندې برخو څخه یوه برخه انتخاب کړئ.
+        </p>
 
-
-        <div class="part">
-
-            <div class="number">01</div>
-
-            <h3>مقدمه</h3>
-
-            <p>
-                د تفسیر مقدمه او لومړني معلومات
-            </p>
-
-            <a href="#" class="listen">
-                ▶ اورېدل
-            </a>
-
-        </div>
-
-
-        <div class="part">
-
-            <div class="number">02</div>
-
-            <h3>سورة الفاتحة</h3>
-
-            <p>
-                د سورة الفاتحة تفسیر
-            </p>
-
-            <a href="#" class="listen">
-                ▶ اورېدل
-            </a>
-
-        </div>
-
-
-        <div class="part">
-
-            <div class="number">03</div>
-
-            <h3>سورة البقرة</h3>
-
-            <p>
-                د سورة البقرة تفسیر
-            </p>
-
-            <a href="#" class="listen">
-                ▶ اورېدل
-            </a>
-
-        </div>
-
-
-        <div class="part">
-
-            <div class="number">04</div>
-
-            <h3>نور سورتونه</h3>
-
-            <p>
-                د قرآنکریم نور سورتونه
-            </p>
-
-            <a href="#" class="listen">
-                ▶ اورېدل
-            </a>
-
-        </div>
-
+        <audio id="audioPlayer" controls preload="none">
+            ستا براوزر د Audio Player ملاتړ نه کوي.
+        </audio>
 
     </div>
 
+    <h2 class="parts-title">
+        🎧 د تفسیر ۲۰۵ برخې
+    </h2>
+
+    <div class="parts" id="partsContainer"></div>
 
     <div class="back">
 
@@ -395,10 +381,507 @@ footer strong{
     </p>
 
     <p>
-        په همدې هیله، چې یو مسلمان ګټه ور څخه واخلي او د قدرمنو شیوخو کړي خوارۍ ضایع نه شي. 
+        په همدې هیله، چې یو مسلمان ګټه ور څخه واخلي او د قدرمنو شیوخو کړي خوارۍ ضایع نه شي.
     </p>
 
 </footer>
+
+
+<script>
+
+/* Internet Archive */
+
+const archiveBase =
+"https://archive.org/download/hafiz-fazal-quran-tafsir/";
+
+
+/*
+    د حافظ فضل صاحب د قرآنکریم تفسیر
+    ټول 205 MP3 فایلونه
+*/
+
+const files = [
+
+"000-1.mp3",
+"000-2.mp3",
+"000-3.mp3",
+"000-4.mp3",
+"000-5.mp3",
+"000-6.mp3",
+"000-7.mp3",
+"000-8.mp3",
+"000-9.mp3",
+
+"001-1.mp3",
+"001-2.mp3",
+"001-3.mp3",
+"001-4.mp3",
+"001-5.mp3",
+"001-6.mp3",
+"001-7.mp3",
+"001-8.mp3",
+"001-9.mp3",
+
+"002-1.mp3",
+"002-2.mp3",
+"002-3.mp3",
+"002-4.mp3",
+"002-5.mp3",
+"002-6.mp3",
+"002-7.mp3",
+"002-8.mp3",
+"002-9.mp3",
+"002-10.mp3",
+"002-11.mp3",
+"002-12.mp3",
+"002-13.mp3",
+"002-14.mp3",
+"002-15.mp3",
+"002-16.mp3",
+"002-17.mp3",
+"002-18.mp3",
+"002-19.mp3",
+"002-20.mp3",
+"002-21.mp3",
+"002-22.mp3",
+"002-23.mp3",
+"002-24.mp3",
+"002-25.mp3",
+"002-26.mp3",
+"002-27.mp3",
+"002-28.mp3",
+"002-29.mp3",
+"002-30.mp3",
+"002-31.mp3",
+"002-32.mp3",
+"002-33.mp3",
+"002-34.mp3",
+"002-35.mp3",
+"002-36.mp3",
+
+"003-1.mp3",
+"003-2.mp3",
+"003-3.mp3",
+"003-4.mp3",
+"003-5.mp3",
+"003-6.mp3",
+"003-7.mp3",
+"003-8.mp3",
+"003-9.mp3",
+"003-10.mp3",
+"003-11.mp3",
+"003-12.mp3",
+"003-13.mp3",
+"003-14.mp3",
+"003-15.mp3",
+
+"004-1.mp3",
+"004-2.mp3",
+"004-3.mp3",
+"004-4.mp3",
+"004-5.mp3",
+"004-6.mp3",
+"004-7.mp3",
+"004-8.mp3",
+"004-9.mp3",
+"004-10.mp3",
+"004-11.mp3",
+
+"005-1.mp3",
+"005-2.mp3",
+"005-3.mp3",
+"005-4.mp3",
+"005-5.mp3",
+"005-6.mp3",
+
+"006-1.mp3",
+"006-2.mp3",
+"006-3.mp3",
+"006-4.mp3",
+"006-5.mp3",
+"006-6.mp3",
+"006-7.mp3",
+
+"007-1.mp3",
+"007-2.mp3",
+"007-3.mp3",
+"007-4.mp3",
+"007-5.mp3",
+"007-6.mp3",
+"007-7.mp3",
+"007-8.mp3",
+
+"008-1.mp3",
+"008-2.mp3",
+"008-3.mp3",
+"008-4.mp3",
+"008-5.mp3",
+
+"009-1.mp3",
+"009-2.mp3",
+"009-3.mp3",
+"009-4.mp3",
+"009-5.mp3",
+"009-6.mp3",
+
+"010-1.mp3",
+"010-2.mp3",
+
+"011-1.mp3",
+"011-2.mp3",
+"011-3.mp3",
+"011-4.mp3",
+"011-5.mp3",
+
+"012-1.mp3",
+"012-2.mp3",
+"012-3.mp3",
+
+"013-1.mp3",
+"013-2.mp3",
+"013-3.mp3",
+
+"014.mp3",
+"015.mp3",
+
+"016-1.mp3",
+"016-2.mp3",
+"016-3.mp3",
+"016-4.mp3",
+"016-5.mp3",
+
+"017-1.mp3",
+"017-2.mp3",
+"017-3.mp3",
+
+"018-1.mp3",
+"018-2.mp3",
+"018-3.mp3",
+
+"019-1.mp3",
+"019-2.mp3",
+
+"020-1.mp3",
+"020-2.mp3",
+
+"021-1.mp3",
+"021-2.mp3",
+"021-3.mp3",
+
+"022-1.mp3",
+"022-2.mp3",
+
+"023-1.mp3",
+"023-2.mp3",
+
+"024-1.mp3",
+"024-2.mp3",
+
+"025-1.mp3",
+"025-2.mp3",
+
+"026.mp3",
+
+"027-1.mp3",
+"027-2.mp3",
+
+"028-1.mp3",
+"028-2.mp3",
+
+"029.mp3",
+"030.mp3",
+
+"031 And 032.mp3",
+
+"033-1.mp3",
+"033-2.mp3",
+"033-3.mp3",
+
+"034.mp3",
+"035.mp3",
+"036.mp3",
+
+"037-1.mp3",
+"037-2.mp3",
+
+"038.mp3",
+
+"039-1.mp3",
+"039-2.mp3",
+
+"040.mp3",
+"041.mp3",
+
+"042-1.mp3",
+"042-2.mp3",
+
+"043.mp3",
+
+"044And045.mp3",
+
+"046.mp3",
+"047.mp3",
+"048.mp3",
+
+"049And050And051.mp3",
+
+"052And053.mp3",
+
+"054And055And056.mp3",
+
+"057.mp3",
+"058.mp3",
+
+"059And060.mp3",
+
+"061and062And063And064.mp3",
+
+"065And066And067.mp3",
+
+"068And069And070.mp3",
+
+"071.mp3",
+
+"072And073.mp3",
+
+"074And075And076.mp3",
+
+"077And078And079And80.mp3",
+
+"081And082And083And084And085And086.mp3",
+
+"087And088And089And090And091And092.mp3",
+
+"093-1.mp3",
+"093-2.mp3",
+
+"094.mp3",
+"095.mp3",
+
+"096And097.mp3",
+
+"098.mp3",
+
+"099And100And101.mp3",
+
+"102And103And104.mp3",
+
+"105To114.mp3"
+
+];
+
+
+/* د سورتونو نومونه */
+
+const names = {
+
+"000":"مقدمه",
+"001":"سورة الفاتحة",
+"002":"سورة البقرة",
+"003":"سورة آل عمران",
+"004":"سورة النساء",
+"005":"سورة المائدة",
+"006":"سورة الأنعام",
+"007":"سورة الأعراف",
+"008":"سورة الأنفال",
+"009":"سورة التوبة",
+"010":"سورة يونس",
+"011":"سورة هود",
+"012":"سورة يوسف",
+"013":"سورة الرعد",
+"014":"سورة إبراهيم",
+"015":"سورة الحجر",
+"016":"سورة النحل",
+"017":"سورة الإسراء",
+"018":"سورة الكهف",
+"019":"سورة مريم",
+"020":"سورة طه",
+"021":"سورة الأنبياء",
+"022":"سورة الحج",
+"023":"سورة المؤمنون",
+"024":"سورة النور",
+"025":"سورة الفرقان",
+"026":"سورة الشعراء",
+"027":"سورة النمل",
+"028":"سورة القصص",
+"029":"سورة العنكبوت",
+"030":"سورة الروم",
+"031":"سورة لقمان او السجدة",
+"033":"سورة الأحزاب",
+"034":"سورة سبأ",
+"035":"سورة فاطر",
+"036":"سورة يس",
+"037":"سورة الصافات",
+"038":"سورة ص",
+"039":"سورة الزمر",
+"040":"سورة غافر",
+"041":"سورة فصلت",
+"042":"سورة الشورى",
+"043":"سورة الزخرف",
+"044":"سورة الدخان",
+"046":"سورة الأحقاف",
+"047":"سورة محمد",
+"048":"سورة الفتح",
+"049":"سورة الحجرات",
+"057":"سورة الحديد",
+"058":"سورة المجادلة",
+"059":"سورة الحشر",
+"071":"سورة نوح",
+"074":"سورة المدثر",
+"093":"سورة الضحى"
+
+};
+
+
+/* د فایل د شمېرې پیدا کول */
+
+function getPrefix(file){
+
+    let match = file.match(/^(\d{3})/);
+
+    if(match){
+        return match[1];
+    }
+
+    return "";
+}
+
+
+/* د برخې نوم */
+
+function getName(file,index){
+
+    const prefix = getPrefix(file);
+
+    if(names[prefix]){
+        return names[prefix];
+    }
+
+    if(file.includes("And")){
+        return "د قرآنکریم ګډ سورتونه";
+    }
+
+    if(file.includes("and")){
+        return "د قرآنکریم ګډ سورتونه";
+    }
+
+    if(file.includes("To")){
+        return "د قرآنکریم څو سورتونه";
+    }
+
+    return "د قرآنکریم تفسیر";
+}
+
+
+/* د فایل نوم ښکلی کول */
+
+function getPartNumber(file,index){
+
+    let match = file.match(/-(\d+)\.mp3$/);
+
+    if(match){
+        return "برخه " + match[1];
+    }
+
+    if(file.includes("And") || file.includes("and") || file.includes("To")){
+        return "ګډه برخه";
+    }
+
+    return "برخه";
+}
+
+
+/* Player */
+
+const player = document.getElementById("audioPlayer");
+const nowPlaying = document.getElementById("nowPlaying");
+const container = document.getElementById("partsContainer");
+
+
+/* 205 برخې جوړول */
+
+files.forEach(function(file,index){
+
+    const url =
+        archiveBase + encodeURIComponent(file).replace(/%2F/g,"/");
+
+    const card = document.createElement("div");
+
+    card.className = "part";
+
+    const number =
+        String(index + 1).padStart(3,"0");
+
+    const title =
+        getName(file,index);
+
+    const part =
+        getPartNumber(file,index);
+
+    card.innerHTML = `
+
+        <div class="number">${number}</div>
+
+        <h3>${title}</h3>
+
+        <p>${part}</p>
+
+        <button
+            class="listen"
+            type="button"
+            onclick="playAudio('${url.replace(/'/g,"\\'")}','${file.replace(/'/g,"\\'")}')">
+
+            ▶ اورېدل
+
+        </button>
+
+        <br>
+
+        <a
+            class="download"
+            href="${url}"
+            download>
+
+            ⬇️ Download
+
+        </a>
+
+    `;
+
+    container.appendChild(card);
+
+});
+
+
+/* د Audio Play */
+
+function playAudio(url,file){
+
+    player.src = url;
+
+    nowPlaying.innerHTML =
+        "🎧 اوس اورېدل کېږي: <strong>" +
+        file +
+        "</strong>";
+
+    player.play();
+
+    window.scrollTo({
+        top: document.querySelector(".player-box").offsetTop - 80,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* د فایلونو شمېر تایید */
+
+console.log(
+    "ټول د تفسیر فایلونه:",
+    files.length
+);
+
+</script>
 
 </body>
 </html>
