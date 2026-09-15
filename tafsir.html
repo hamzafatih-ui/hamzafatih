@@ -105,7 +105,7 @@ nav a:hover{
     max-width:1100px;
     margin:auto;
     padding:20px;
-    padding-bottom:200px;
+    padding-bottom:160px;
 }
 
 /* Intro */
@@ -128,8 +128,9 @@ nav a:hover{
     color:#666;
 }
 
+
 /* =====================================
-   FIXED AUDIO PLAYER
+   FIXED AUDIO PLAYER - SMALL
 ===================================== */
 
 .player-box{
@@ -140,48 +141,50 @@ nav a:hover{
     z-index:9999;
 
     background:linear-gradient(145deg,#061b14,#103b2a);
-    border-radius:18px 18px 0 0;
-    padding:7px 10px 8px;
+    border-radius:12px 12px 0 0;
+    padding:4px 8px 5px;
     text-align:center;
-    box-shadow:0 -6px 20px rgba(0,0,0,.30);
+    box-shadow:0 -5px 15px rgba(0,0,0,.30);
     border:1px solid #d7b65a;
     color:white;
 }
 
 .player-cover{
-    width:55px;
-    height:55px;
+    width:34px;
+    height:34px;
     object-fit:cover;
     border-radius:50%;
-    border:2px solid #d7b65a;
-    box-shadow:0 3px 12px rgba(0,0,0,.4);
-    margin:0 auto 3px;
+    border:1px solid #d7b65a;
+    box-shadow:0 2px 7px rgba(0,0,0,.3);
+    margin:0 auto 1px;
     display:block;
 }
 
 .player-title{
     color:#d7b65a;
-    font-size:15px;
+    font-size:11px;
     font-weight:bold;
-    margin-bottom:0;
+    margin:0;
+    line-height:1.25;
 }
 
 .player-file{
     color:#ddd;
-    font-size:11px;
-    margin-bottom:4px;
+    font-size:8px;
+    margin:0;
     direction:ltr;
+    line-height:1.2;
 }
 
 .progress-area{
     width:100%;
     max-width:720px;
-    margin:auto;
+    margin:1px auto 0;
 }
 
 .progress{
     width:100%;
-    height:5px;
+    height:3px;
     background:#355648;
     border-radius:10px;
     appearance:none;
@@ -190,16 +193,16 @@ nav a:hover{
 
 .progress::-webkit-slider-thumb{
     appearance:none;
-    width:13px;
-    height:13px;
+    width:9px;
+    height:9px;
     border-radius:50%;
     background:#d7b65a;
     cursor:pointer;
 }
 
 .progress::-moz-range-thumb{
-    width:13px;
-    height:13px;
+    width:9px;
+    height:9px;
     border:none;
     border-radius:50%;
     background:#d7b65a;
@@ -211,28 +214,29 @@ nav a:hover{
     justify-content:space-between;
     direction:ltr;
     color:#ddd;
-    font-size:10px;
-    margin-top:1px;
+    font-size:8px;
+    margin:0;
+    line-height:1.2;
 }
 
 .controls{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:5px;
-    margin-top:4px;
+    gap:3px;
+    margin-top:2px;
     direction:ltr;
     flex-wrap:wrap;
 }
 
 .control-btn{
-    width:35px;
-    height:35px;
+    width:28px;
+    height:28px;
     border-radius:50%;
     border:1px solid #d7b65a;
     background:#16452f;
     color:white;
-    font-size:14px;
+    font-size:10px;
     cursor:pointer;
     display:flex;
     align-items:center;
@@ -242,15 +246,15 @@ nav a:hover{
 
 .control-btn:hover{
     background:#1e5a40;
-    transform:scale(1.06);
+    transform:scale(1.04);
 }
 
 .play-btn{
-    width:45px;
-    height:45px;
+    width:34px;
+    height:34px;
     background:#d7b65a;
     color:#09251b;
-    font-size:20px;
+    font-size:15px;
     border:none;
 }
 
@@ -259,35 +263,26 @@ nav a:hover{
 }
 
 .volume-row{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:6px;
-    margin-top:3px;
-    direction:ltr;
-}
-
-.volume{
-    width:80px;
-    height:4px;
-    accent-color:#d7b65a;
+    display:none;
 }
 
 .download-current{
     display:inline-block;
-    margin-top:4px;
-    padding:4px 13px;
-    border-radius:20px;
+    margin-top:2px;
+    padding:2px 8px;
+    border-radius:15px;
     background:#d7b65a;
     color:#09251b;
     text-decoration:none;
     font-weight:bold;
-    font-size:11px;
+    font-size:8px;
+    line-height:1.4;
 }
 
 .download-current:hover{
     background:#e5d59b;
 }
+
 
 /* Parts */
 
@@ -420,38 +415,38 @@ footer strong{
     }
 
     .player-box{
-        padding:7px 8px 8px;
+        padding:4px 6px 5px;
+        border-radius:12px 12px 0 0;
     }
 
     .player-cover{
-        width:50px;
-        height:50px;
+        width:34px;
+        height:34px;
     }
 
     .player-title{
-        font-size:14px;
+        font-size:11px;
     }
 
     .player-file{
-        font-size:10px;
-        margin-bottom:3px;
+        font-size:8px;
     }
 
     .controls{
-        gap:5px;
-        margin-top:4px;
+        gap:3px;
+        margin-top:2px;
     }
 
     .control-btn{
-        width:34px;
-        height:34px;
-        font-size:13px;
+        width:28px;
+        height:28px;
+        font-size:10px;
     }
 
     .play-btn{
-        width:44px;
-        height:44px;
-        font-size:19px;
+        width:34px;
+        height:34px;
+        font-size:15px;
     }
 
     .volume-row{
@@ -459,13 +454,13 @@ footer strong{
     }
 
     .download-current{
-        margin-top:4px;
-        padding:4px 13px;
-        font-size:11px;
+        margin-top:2px;
+        padding:2px 8px;
+        font-size:8px;
     }
 
     .container{
-        padding-bottom:200px;
+        padding-bottom:155px;
     }
 
 }
@@ -1260,6 +1255,13 @@ function playAudio(index){
 
     progress.value =
         0;
+
+
+    /*
+       دلته window.scrollTo نشته.
+       نو د فایل په کلیک کولو سره
+       صفحه سر ته نه ځي.
+    */
 
 
     player.play()
