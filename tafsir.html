@@ -9,465 +9,465 @@
 <style>
 
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 body{
-    font-family:Arial,Tahoma,sans-serif;
-    background:#f4f1e8;
-    color:#24352c;
+    font-family:Tahoma, Arial, sans-serif;
+    background:#f5f7f5;
+    color:#183c2c;
     line-height:1.8;
+    padding-bottom:105px;
 }
 
-/* Header */
+/* ================= HEADER ================= */
 
 header{
-    background-image:url('header.png');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    background:
+    linear-gradient(rgba(0,55,35,.78),rgba(0,55,35,.78)),
+    url("header.png") center/cover no-repeat;
     color:white;
+    padding:22px 15px 28px;
     text-align:center;
-    padding:55px 20px;
 }
 
 .logo{
-    width:80px;
-    height:80px;
+    width:62px;
+    height:62px;
     margin:auto;
-    border:2px solid #d7b65a;
+    border:2px solid #d6b35a;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:42px;
-    color:#d7b65a;
+    font-size:32px;
+    color:#d6b35a;
+    background:rgba(0,0,0,.20);
 }
 
 header h1{
-    margin-top:15px;
-    font-size:32px;
+    margin-top:8px;
+    font-size:25px;
+    color:#f1d37b;
 }
 
-.subtitle{
-    color:#e5d59b;
-    margin-top:5px;
+header p{
+    font-size:14px;
+    color:#fff;
 }
 
-/* Navigation */
+/* ================= NAV ================= */
 
 nav{
-    background:#061b14;
-    text-align:center;
-    padding:12px 5px;
+    background:#063d29;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+    padding:7px;
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:1000;
+    box-shadow:0 2px 8px rgba(0,0,0,.18);
 }
 
 nav a{
-    display:inline-block;
     color:white;
     text-decoration:none;
-    padding:7px 12px;
-    margin:3px;
-    border-radius:20px;
-    font-size:14px;
+    padding:6px 11px;
+    border-radius:6px;
+    font-size:13px;
 }
 
 nav a:hover{
-    background:#16452f;
-    color:#d7b65a;
+    background:#b99a4b;
+    color:white;
 }
 
-/* Hero */
-
-.hero{
-    text-align:center;
-    padding:45px 20px 25px;
-}
-
-.hero h2{
-    color:#16452f;
-    font-size:27px;
-}
-
-.hero p{
-    color:#777;
-    margin-top:8px;
-}
-
-/* Main */
+/* ================= MAIN ================= */
 
 .container{
     max-width:1100px;
     margin:auto;
-    padding:20px;
-    padding-bottom:230px;
+    padding:20px 14px 30px;
 }
 
-/* Intro */
+.hero{
+    background:white;
+    border-radius:14px;
+    padding:22px 15px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    margin-bottom:18px;
+}
+
+.bismillah{
+    color:#a37e27;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.hero h2{
+    margin-top:5px;
+    color:#124d35;
+    font-size:22px;
+}
+
+.hero p{
+    font-size:14px;
+    color:#666;
+    margin-top:5px;
+}
+
+/* ================= INTRO ================= */
 
 .intro{
-    background:white;
-    border-radius:22px;
-    padding:30px 20px;
-    text-align:center;
-    box-shadow:0 6px 20px rgba(0,0,0,.08);
-    border:1px solid #e1d8c5;
+    background:#eaf3ed;
+    border-right:4px solid #b99a4b;
+    padding:14px;
+    border-radius:9px;
+    margin-bottom:20px;
 }
 
-.intro h2{
-    color:#16452f;
-    margin-bottom:8px;
+.intro h3{
+    color:#124d35;
+    margin-bottom:4px;
+    font-size:18px;
 }
 
 .intro p{
-    color:#666;
+    font-size:14px;
 }
 
-/* =====================================
-   FIXED AUDIO PLAYER
-===================================== */
+/* ================= PARTS ================= */
 
-.player-box{
+.parts{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:13px;
+}
+
+.part{
+    background:white;
+    border-radius:12px;
+    padding:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+    border:1px solid #e5e5e5;
+}
+
+.part h3{
+    color:#104b34;
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.part p{
+    color:#777;
+    font-size:12px;
+}
+
+/* ================= AUDIO LIST ================= */
+
+.audio-list{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:10px;
+}
+
+.audio-card{
+    background:white;
+    border:1px solid #e2e7e3;
+    border-radius:10px;
+    padding:11px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.audio-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
+    border-color:#b99a4b;
+}
+
+.audio-card.active{
+    border:2px solid #b99a4b;
+    background:#fffdf5;
+}
+
+.audio-number{
+    color:#b18b35;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.audio-name{
+    color:#174d36;
+    font-size:15px;
+    font-weight:bold;
+    margin-top:2px;
+}
+
+.audio-file{
+    direction:ltr;
+    text-align:left;
+    color:#999;
+    font-size:10px;
+    margin-top:2px;
+    word-break:break-all;
+}
+
+/* ================= FIXED PLAYER ================= */
+
+.player{
     position:fixed;
     bottom:0;
     left:0;
     right:0;
     z-index:9999;
 
-    background:linear-gradient(145deg,#061b14,#103b2a);
-    border-radius:22px 22px 0 0;
-    padding:12px 15px 14px;
-    text-align:center;
-    box-shadow:0 -8px 25px rgba(0,0,0,.30);
-    border:1px solid #d7b65a;
+    background:
+    linear-gradient(rgba(2,48,32,.97),rgba(2,48,32,.97));
+
     color:white;
+    border-top:2px solid #b99a4b;
+
+    padding:7px 10px;
+
+    box-shadow:0 -3px 15px rgba(0,0,0,.25);
 }
 
+/* player main */
+
+.player-inner{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+/* cover */
+
 .player-cover{
-    width:70px;
-    height:70px;
+    width:42px;
+    height:42px;
+    min-width:42px;
+    border-radius:7px;
     object-fit:cover;
-    border-radius:50%;
-    border:3px solid #d7b65a;
-    box-shadow:0 4px 15px rgba(0,0,0,.4);
-    margin:0 auto 5px;
-    display:block;
+    border:1px solid #c7a54e;
+}
+
+/* info */
+
+.player-info{
+    flex:1;
+    min-width:0;
 }
 
 .player-title{
-    color:#d7b65a;
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:0;
-}
-
-.player-file{
-    color:#ddd;
+    color:#f1d37b;
     font-size:12px;
-    margin-bottom:7px;
-    direction:ltr;
+    font-weight:bold;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
-.progress-area{
-    width:100%;
-    max-width:720px;
-    margin:auto;
-}
-
-.progress{
-    width:100%;
-    height:6px;
-    background:#355648;
-    border-radius:10px;
-    appearance:none;
-    cursor:pointer;
-}
-
-.progress::-webkit-slider-thumb{
-    appearance:none;
-    width:15px;
-    height:15px;
-    border-radius:50%;
-    background:#d7b65a;
-    cursor:pointer;
-}
-
-.progress::-moz-range-thumb{
-    width:15px;
-    height:15px;
-    border:none;
-    border-radius:50%;
-    background:#d7b65a;
-    cursor:pointer;
-}
-
-.time-row{
-    display:flex;
-    justify-content:space-between;
-    direction:ltr;
+.player-time{
     color:#ddd;
-    font-size:11px;
-    margin-top:2px;
+    font-size:10px;
+    direction:ltr;
 }
+
+/* controls */
 
 .controls{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
-    margin-top:7px;
-    direction:ltr;
-    flex-wrap:wrap;
+    gap:4px;
 }
 
-.control-btn{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    border:1px solid #d7b65a;
-    background:#16452f;
+.player button{
+    border:none;
+    background:#14543b;
     color:white;
-    font-size:16px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
     cursor:pointer;
+    font-size:15px;
     display:flex;
     align-items:center;
     justify-content:center;
     transition:.2s;
 }
 
-.control-btn:hover{
-    background:#1e5a40;
-    transform:scale(1.06);
+.player button:hover{
+    background:#b99a4b;
 }
 
-.play-btn{
-    width:52px;
-    height:52px;
-    background:#d7b65a;
-    color:#09251b;
-    font-size:23px;
-    border:none;
+.player .play-btn{
+    width:38px;
+    height:38px;
+    background:#b99a4b;
+    font-size:17px;
 }
 
-.play-btn:hover{
-    background:#e5d59b;
+.player .play-btn:hover{
+    background:#d0ad59;
 }
 
-.volume-row{
+/* progress */
+
+.progress-row{
+    max-width:1100px;
+    margin:5px auto 0;
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:6px;
-    margin-top:5px;
-    direction:ltr;
+    gap:7px;
+}
+
+.progress{
+    flex:1;
+    height:4px;
+    accent-color:#d0ad59;
+    cursor:pointer;
 }
 
 .volume{
-    width:90px;
+    width:65px;
     height:4px;
-    accent-color:#d7b65a;
+    accent-color:#d0ad59;
 }
 
-.download-current{
-    display:inline-block;
-    margin-top:6px;
-    padding:5px 15px;
-    border-radius:20px;
-    background:#d7b65a;
-    color:#09251b;
+/* download */
+
+.download-btn{
     text-decoration:none;
-    font-weight:bold;
-    font-size:12px;
-}
-
-.download-current:hover{
-    background:#e5d59b;
-}
-
-/* Parts */
-
-.parts-title{
-    text-align:center;
-    margin:45px 0 20px;
-    color:#16452f;
-}
-
-.parts{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.part{
-    background:white;
-    border-radius:20px;
-    padding:25px 18px;
-    text-align:center;
-    border:1px solid #e2dac8;
-    box-shadow:0 6px 18px rgba(0,0,0,.07);
-    transition:.2s;
-}
-
-.part:hover{
-    transform:translateY(-4px);
-}
-
-.part .number{
-    width:55px;
-    height:55px;
-    margin:auto;
+    background:#14543b;
+    color:white;
+    width:32px;
+    height:32px;
     border-radius:50%;
-    background:#16452f;
-    color:#d7b65a;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:18px;
-    font-weight:bold;
-}
-
-.part h3{
-    margin-top:12px;
-    color:#16452f;
-}
-
-.part p{
-    color:#777;
     font-size:14px;
-    margin-top:5px;
 }
 
-.listen{
-    display:inline-block;
-    margin-top:15px;
-    padding:8px 20px;
-    background:#16452f;
-    color:white;
-    text-decoration:none;
-    border-radius:25px;
-    border:none;
-    cursor:pointer;
-    font-size:15px;
+.download-btn:hover{
+    background:#b99a4b;
 }
 
-.listen:hover{
-    background:#1e5a40;
-}
-
-.download{
-    display:inline-block;
-    margin-top:8px;
-    padding:6px 15px;
-    background:#d7b65a;
-    color:#09251b;
-    text-decoration:none;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:bold;
-}
-
-/* Back button */
-
-.back{
-    text-align:center;
-    margin:40px 0 10px;
-}
-
-.back a{
-    display:inline-block;
-    background:#d7b65a;
-    color:#09251b;
-    text-decoration:none;
-    padding:10px 25px;
-    border-radius:25px;
-    font-weight:bold;
-}
-
-/* Footer */
+/* ================= FOOTER ================= */
 
 footer{
-    margin-top:50px;
-    background:#09251b;
+    background:#063d29;
     color:white;
     text-align:center;
-    padding:28px 15px;
+    padding:18px 10px;
+    margin-top:30px;
+    font-size:13px;
 }
 
-footer strong{
-    color:#d7b65a;
+footer span{
+    color:#d6b35a;
 }
 
-/* Mobile */
+/* ================= MOBILE ================= */
 
-@media(max-width:600px){
+@media(max-width:650px){
+
+    header{
+        padding:17px 10px 22px;
+    }
 
     header h1{
-        font-size:27px;
-    }
-
-    .hero h2{
-        font-size:23px;
-    }
-
-    nav a{
-        font-size:12px;
-        padding:5px 7px;
-    }
-
-    .player-box{
-        padding:9px 10px 10px;
-    }
-
-    .player-cover{
-        width:58px;
-        height:58px;
-    }
-
-    .player-title{
-        font-size:16px;
-    }
-
-    .player-file{
-        font-size:11px;
-        margin-bottom:4px;
-    }
-
-    .controls{
-        gap:6px;
-        margin-top:5px;
-    }
-
-    .control-btn{
-        width:37px;
-        height:37px;
-        font-size:14px;
-    }
-
-    .play-btn{
-        width:48px;
-        height:48px;
         font-size:21px;
     }
 
-    .volume-row{
-        display:none;
+    .logo{
+        width:54px;
+        height:54px;
+        font-size:27px;
     }
 
-    .download-current{
-        margin-top:4px;
-        padding:4px 13px;
+    nav a{
         font-size:11px;
+        padding:5px 7px;
     }
 
     .container{
-        padding-bottom:220px;
+        padding:15px 9px 25px;
     }
 
+    .hero{
+        padding:17px 10px;
+    }
+
+    .bismillah{
+        font-size:19px;
+    }
+
+    .hero h2{
+        font-size:19px;
+    }
+
+    .parts{
+        grid-template-columns:1fr;
+    }
+
+    .audio-list{
+        grid-template-columns:1fr;
+    }
+
+    .player{
+        padding:6px 7px;
+    }
+
+    .player-inner{
+        gap:6px;
+    }
+
+    .player-cover{
+        width:38px;
+        height:38px;
+        min-width:38px;
+    }
+
+    .player-title{
+        font-size:11px;
+    }
+
+    .player button{
+        width:30px;
+        height:30px;
+        font-size:13px;
+    }
+
+    .player .play-btn{
+        width:35px;
+        height:35px;
+        font-size:15px;
+    }
+
+    .download-btn{
+        width:29px;
+        height:29px;
+        font-size:12px;
+    }
+
+    .volume{
+        display:none;
+    }
+
+    body{
+        padding-bottom:91px;
+    }
 }
 
 </style>
@@ -475,17 +475,19 @@ footer strong{
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
 
     <div class="logo">☪</div>
 
     <h1>د قرآنکریم تفسیر</h1>
 
-    <div class="subtitle">
-        Hamza Fatih | حمزه فاتح
-    </div>
+    <p>Hamza Fatih | حمزه فاتح</p>
 
 </header>
+
+<!-- ================= NAV ================= -->
 
 <nav>
 
@@ -495,193 +497,160 @@ footer strong{
 
     <a href="tafsir.html">🎧 تفسیر</a>
 
-    <a href="index.html#audio">🎙️ صوتي </a>
+    <a href="index.html#audio">🎙️ صوتي مواد</a>
 
     <a href="index.html#articles">📝 مقالې</a>
 
+    <a href="index.html#about">ℹ️ زموږ په اړه</a>
+
 </nav>
 
-<section class="hero">
-
-    <h2>بسم الله الرحمن الرحيم</h2>
-
-    <p>
-        د علامه حافظ فضل صاحب د قرآنکریم د تفسیر صوتي مجموعه
-    </p>
-
-</section>
+<!-- ================= CONTENT ================= -->
 
 <div class="container">
 
-    <div class="intro">
+    <section class="hero">
 
-        <h2>📖 د قرآنکریم تفسیر</h2>
+        <div class="bismillah">
+            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
+        </div>
+
+        <h2>
+            د قرآنکریم تفسیر
+        </h2>
 
         <p>
-            دلته د حافظ فضل صاحب د قرآنکریم تفسیر
-            ټولې ۲۰۵ صوتي برخې په منظم ډول وړاندې کېږي.
+            د حافظ فضل صاحب د قرآنکریم د تفسیر صوتي مجموعه
         </p>
 
-    </div>
+    </section>
 
+    <section class="intro">
 
-    <!-- ثابت Audio Player -->
+        <h3>📖 د تفسیر مجموعه</h3>
 
-    <div class="player-box">
+        <p>
+            دلته د قرآنکریم د تفسیر ټولې ۲۰۵ صوتي برخې په منظم ډول
+            وړاندې شوې دي. پر هره برخه کلیک وکړئ او تفسیر واورئ.
+        </p>
+
+    </section>
+
+    <div id="audioList" class="audio-list"></div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026
+    <span>Hamza Fatih | حمزه فاتح</span>
+
+    <br>
+
+    د اسلامي علم او معلوماتو لپاره
+
+</footer>
+
+<!-- ================= PLAYER ================= -->
+
+<div class="player">
+
+    <div class="player-inner">
 
         <img
-            src="header.png"
+            id="playerCover"
             class="player-cover"
-            alt="Hamza Fatih">
+            src="header.png"
+            alt="تفسیر"
+        >
 
-        <div class="player-title" id="playerTitle">
-            د تفسیر غږیز پلیر
-        </div>
+        <div class="player-info">
 
-        <div class="player-file" id="playerFile">
-            د اورېدو لپاره یوه برخه انتخاب کړئ
-        </div>
+            <div id="playerTitle" class="player-title">
+                فایل انتخاب کړئ
+            </div>
 
-        <div class="progress-area">
-
-            <input
-                type="range"
-                class="progress"
-                id="progress"
-                min="0"
-                max="100"
-                value="0">
-
-            <div class="time-row">
-
-                <span id="currentTime">
-                    00:00
-                </span>
-
-                <span id="duration">
-                    00:00
-                </span>
-
+            <div id="playerTime" class="player-time">
+                00:00 / 00:00
             </div>
 
         </div>
 
-
         <div class="controls">
 
-            <button
-                class="control-btn"
-                onclick="previousAudio()"
-                title="مخکینی">
+            <button onclick="previousAudio()" title="مخکینی">
                 ⏮
             </button>
 
-            <button
-                class="control-btn"
-                onclick="backward10()"
-                title="10 ثانیې شاته">
-                ↶10
+            <button onclick="backward10()" title="۱۰ ثانیې شاته">
+                ↶
             </button>
 
             <button
-                class="control-btn play-btn"
-                id="playButton"
+                id="playBtn"
+                class="play-btn"
                 onclick="togglePlay()"
-                title="Play">
+                title="Play"
+            >
                 ▶
             </button>
 
-            <button
-                class="control-btn"
-                onclick="forward10()"
-                title="10 ثانیې مخکې">
-                10↷
+            <button onclick="forward10()" title="۱۰ ثانیې مخکې">
+                ↷
             </button>
 
-            <button
-                class="control-btn"
-                onclick="nextAudio()"
-                title="بل">
+            <button onclick="nextAudio()" title="بل">
                 ⏭
             </button>
 
         </div>
 
-
-        <div class="volume-row">
-
-            <span>🔊</span>
-
-            <input
-                type="range"
-                class="volume"
-                id="volume"
-                min="0"
-                max="1"
-                step="0.01"
-                value="1">
-
-        </div>
-
-
         <a
-            id="downloadCurrent"
-            class="download-current"
+            id="downloadBtn"
+            class="download-btn"
             href="#"
-            target="_blank">
-
-            ⬇️ دا برخه Download کړئ
-
+            download
+            title="Download"
+        >
+            ⬇
         </a>
 
     </div>
 
+    <div class="progress-row">
 
-    <h2 class="parts-title">
-        🎧 د تفسیر ۲۰۵ برخې
-    </h2>
+        <input
+            id="progress"
+            class="progress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+        >
 
-
-    <div class="parts" id="partsContainer"></div>
-
-
-    <div class="back">
-
-        <a href="index.html">
-            🏠 بېرته اصلي پاڼې ته
-        </a>
+        <input
+            id="volume"
+            class="volume"
+            type="range"
+            min="0"
+            max="1"
+            value="1"
+            step="0.01"
+            title="Volume"
+        >
 
     </div>
 
 </div>
 
-
-<footer>
-
-    <p>
-        © 2026 <strong>Hamza Fatih</strong>
-    </p>
-
-    <p>
-        په همدې هیله، چې یو مسلمان ګټه ور څخه واخلي او د قدرمنو شیوخو کړي خوارۍ ضایع نه شي.
-    </p>
-
-</footer>
-
-
 <script>
 
-/* ==========================================
-   INTERNET ARCHIVE
-========================================== */
-
-const archiveBase =
-"https://archive.org/download/hafiz-fazal-quran-tafsir/";
-
-
-/* ==========================================
-   205 MP3 FILES
-========================================== */
+/* =========================================================
+   ټول 205 فایلونه
+========================================================= */
 
 const files = [
 
@@ -953,14 +922,14 @@ const files = [
 
 ];
 
+/* =========================================================
+   د سورتونو نومونه
+========================================================= */
 
-/* ==========================================
-   SURAH NAMES
-========================================== */
-
-const names = {
+const surahNames = {
 
 "000":"مقدمه",
+
 "001":"سورة الفاتحة",
 "002":"سورة البقرة",
 "003":"سورة آل عمران",
@@ -991,7 +960,8 @@ const names = {
 "028":"سورة القصص",
 "029":"سورة العنكبوت",
 "030":"سورة الروم",
-"031":"سورة لقمان او السجدة",
+"031":"سورة لقمان",
+"032":"سورة السجدة",
 "033":"سورة الأحزاب",
 "034":"سورة سبأ",
 "035":"سورة فاطر",
@@ -1004,607 +974,463 @@ const names = {
 "042":"سورة الشورى",
 "043":"سورة الزخرف",
 "044":"سورة الدخان",
+"045":"سورة الجاثية",
 "046":"سورة الأحقاف",
 "047":"سورة محمد",
 "048":"سورة الفتح",
 "049":"سورة الحجرات",
+"050":"سورة ق",
+"051":"سورة الذاريات",
+"052":"سورة الطور",
+"053":"سورة النجم",
+"054":"سورة القمر",
+"055":"سورة الرحمن",
+"056":"سورة الواقعة",
 "057":"سورة الحديد",
 "058":"سورة المجادلة",
 "059":"سورة الحشر",
+"060":"سورة الممتحنة",
+"061":"سورة الصف",
+"062":"سورة الجمعة",
+"063":"سورة المنافقون",
+"064":"سورة التغابن",
+"065":"سورة الطلاق",
+"066":"سورة التحريم",
+"067":"سورة الملك",
+"068":"سورة القلم",
+"069":"سورة الحاقة",
+"070":"سورة المعارج",
 "071":"سورة نوح",
+"072":"سورة الجن",
+"073":"سورة المزمل",
 "074":"سورة المدثر",
-"093":"سورة الضحى"
+"075":"سورة القيامة",
+"076":"سورة الإنسان",
+"077":"سورة المرسلات",
+"078":"سورة النبأ",
+"079":"سورة النازعات",
+"080":"سورة عبس",
+"081":"سورة التكوير",
+"082":"سورة الانفطار",
+"083":"سورة المطففين",
+"084":"سورة الانشقاق",
+"085":"سورة البروج",
+"086":"سورة الطارق",
+"087":"سورة الأعلى",
+"088":"سورة الغاشية",
+"089":"سورة الفجر",
+"090":"سورة البلد",
+"091":"سورة الشمس",
+"092":"سورة الليل",
+"093":"سورة الضحى",
+"094":"سورة الشرح",
+"095":"سورة التين",
+"096":"سورة العلق",
+"097":"سورة القدر",
+"098":"سورة البينة",
+"099":"سورة الزلزلة",
+"100":"سورة العاديات",
+"101":"سورة القارعة",
+"102":"سورة التكاثر",
+"103":"سورة العصر",
+"104":"سورة الهمزة",
+"105":"سورة الفيل",
+"106":"سورة قريش",
+"107":"سورة الماعون",
+"108":"سورة الكوثر",
+"109":"سورة الكافرون",
+"110":"سورة النصر",
+"111":"سورة المسد",
+"112":"سورة الإخلاص",
+"113":"سورة الفلق",
+"114":"سورة الناس"
 
 };
 
-
-/* ==========================================
-   PLAYER
-========================================== */
-
-const player =
-    new Audio();
-
-player.preload =
-    "metadata";
-
-const progress =
-    document.getElementById("progress");
-
-const currentTime =
-    document.getElementById("currentTime");
-
-const duration =
-    document.getElementById("duration");
-
-const playButton =
-    document.getElementById("playButton");
-
-const playerTitle =
-    document.getElementById("playerTitle");
-
-const playerFile =
-    document.getElementById("playerFile");
-
-const downloadCurrent =
-    document.getElementById("downloadCurrent");
-
-const volume =
-    document.getElementById("volume");
-
-const partsContainer =
-    document.getElementById("partsContainer");
-
-
-let currentIndex = -1;
-
-
-/* ==========================================
-   URL
-========================================== */
-
-function getURL(file){
-
-    return archiveBase +
-        encodeURIComponent(file);
-
-}
-
-
-/* ==========================================
-   SURAH NAME
-========================================== */
+/* =========================================================
+   د فایل نوم
+========================================================= */
 
 function getName(file){
 
-    const match =
-        file.match(/^(\d{3})/);
-
-    if(
-        match &&
-        names[match[1]]
-    ){
-
-        return names[match[1]];
-
+    if(file.startsWith("000-")){
+        return "مقدمه";
     }
 
-    if(
-        file.includes("And") ||
-        file.includes("and") ||
-        file.includes("To")
-    ){
+    let match = file.match(/^(\d{3})/);
 
-        return "د قرآنکریم ګډ سورتونه";
+    if(match && surahNames[match[1]]){
+        return surahNames[match[1]];
+    }
 
+    if(file.includes("031 And 032")){
+        return "سورة لقمان او سورة السجدة";
+    }
+
+    if(file.includes("044And045")){
+        return "سورة الدخان او سورة الجاثية";
+    }
+
+    if(file.includes("049And050And051")){
+        return "سورة الحجرات، ق او الذاريات";
+    }
+
+    if(file.includes("052And053")){
+        return "سورة الطور او سورة النجم";
+    }
+
+    if(file.includes("054And055And056")){
+        return "سورة القمر، الرحمن او الواقعة";
+    }
+
+    if(file.includes("059And060")){
+        return "سورة الحشر او سورة الممتحنة";
+    }
+
+    if(file.includes("061and062And063And064")){
+        return "سورتونه 61 تر 64";
+    }
+
+    if(file.includes("065And066And067")){
+        return "سورتونه 65 تر 67";
+    }
+
+    if(file.includes("068And069And070")){
+        return "سورتونه 68 تر 70";
+    }
+
+    if(file.includes("072And073")){
+        return "سورة الجن او سورة المزمل";
+    }
+
+    if(file.includes("074And075And076")){
+        return "سورة المدثر، القيامة او الإنسان";
+    }
+
+    if(file.includes("077And078And079And80")){
+        return "سورتونه 77 تر 80";
+    }
+
+    if(file.includes("081And082And083And084And085And086")){
+        return "سورتونه 81 تر 86";
+    }
+
+    if(file.includes("087And088And089And090And091And092")){
+        return "سورتونه 87 تر 92";
+    }
+
+    if(file.includes("096And097")){
+        return "سورة العلق او سورة القدر";
+    }
+
+    if(file.includes("099And100And101")){
+        return "سورتونه 99 تر 101";
+    }
+
+    if(file.includes("102And103And104")){
+        return "سورتونه 102 تر 104";
+    }
+
+    if(file.includes("105To114")){
+        return "له سورة الفيل تر سورة الناس";
     }
 
     return "د قرآنکریم تفسیر";
 
 }
 
+/* =========================================================
+   URL
+========================================================= */
 
-/* ==========================================
-   PART NUMBER
-========================================== */
+function getURL(file){
 
-function getPart(file){
-
-    const match =
-        file.match(/-(\d+)\.mp3$/);
-
-    if(match){
-
-        return "برخه " +
-            match[1];
-
-    }
-
-    return "صوتي برخه";
+    return "https://archive.org/download/hafiz-fazal-quran-tafsir/"
+        + encodeURIComponent(file);
 
 }
 
+/* =========================================================
+   AUDIO
+========================================================= */
 
-/* ==========================================
-   CREATE 205 CARDS
-========================================== */
+const audio = new Audio();
 
-files.forEach(
-function(file,index){
+let currentIndex = -1;
 
-    const card =
-        document.createElement("div");
+const list = document.getElementById("audioList");
 
-    card.className =
-        "part";
+const playBtn = document.getElementById("playBtn");
 
-    const number =
-        String(index + 1)
-        .padStart(3,"0");
+const progress = document.getElementById("progress");
 
-    const title =
-        getName(file);
+const volume = document.getElementById("volume");
 
-    const part =
-        getPart(file);
+const playerTitle = document.getElementById("playerTitle");
 
-    const url =
-        getURL(file);
+const playerTime = document.getElementById("playerTime");
 
+const downloadBtn = document.getElementById("downloadBtn");
+
+/* =========================================================
+   فایلونه جوړول
+========================================================= */
+
+files.forEach((file,index)=>{
+
+    const card = document.createElement("div");
+
+    card.className = "audio-card";
+
+    card.dataset.index = index;
 
     card.innerHTML = `
 
-        <div class="number">
-            ${number}
+        <div class="audio-number">
+            برخه ${index + 1}
         </div>
 
-        <h3>
-            ${title}
-        </h3>
+        <div class="audio-name">
+            ${getName(file)}
+        </div>
 
-        <p>
-            ${part}
-        </p>
-
-        <button
-            class="listen"
-            type="button">
-
-            ▶ اورېدل
-
-        </button>
-
-        <br>
-
-        <a
-            class="download"
-            href="${url}"
-            target="_blank">
-
-            ⬇️ Download
-
-        </a>
+        <div class="audio-file">
+            ${file}
+        </div>
 
     `;
 
+    card.onclick = ()=>playAudio(index);
 
-    const button =
-        card.querySelector(
-            ".listen"
-        );
-
-
-    button.addEventListener(
-        "click",
-        function(){
-
-            playAudio(index);
-
-        }
-    );
-
-
-    partsContainer.appendChild(
-        card
-    );
+    list.appendChild(card);
 
 });
 
-
-/* ==========================================
-   PLAY AUDIO
-========================================== */
+/* =========================================================
+   Play Audio
+========================================================= */
 
 function playAudio(index){
 
-    if(
-        index < 0 ||
-        index >= files.length
-    ){
-
+    if(index < 0 || index >= files.length){
         return;
-
     }
 
+    currentIndex = index;
 
-    currentIndex =
-        index;
+    const file = files[index];
 
+    const url = getURL(file);
 
-    const file =
-        files[index];
+    audio.src = url;
 
-
-    const url =
-        getURL(file);
-
-
-    player.src =
-        url;
-
+    audio.play().catch(()=>{});
 
     playerTitle.textContent =
-        getName(file);
+        (index + 1) + " - " + getName(file);
 
+    downloadBtn.href = url;
 
-    playerFile.textContent =
-        "فایل " +
-        (index + 1) +
-        " له 205 — " +
-        file;
+    playBtn.textContent = "⏸";
 
+    document.querySelectorAll(".audio-card")
+        .forEach(card=>card.classList.remove("active"));
 
-    downloadCurrent.href =
-        url;
+    const activeCard =
+        document.querySelector(
+            `.audio-card[data-index="${index}"]`
+        );
 
+    if(activeCard){
+        activeCard.classList.add("active");
+    }
 
-    progress.value =
-        0;
-
-
-    player.play()
-        .then(
-        function(){
-
-            playButton.textContent =
-                "⏸";
-
-        })
-        .catch(
-        function(){
-
-            playButton.textContent =
-                "▶";
-
-        });
-
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
+    /*
+       مهم:
+       دلته window.scrollTo نشته.
+       نو صفحه به سر ته نه ځي.
+    */
 
 }
 
-
-/* ==========================================
-   PLAY / PAUSE
-========================================== */
+/* =========================================================
+   Play / Pause
+========================================================= */
 
 function togglePlay(){
 
-    if(!player.src){
+    if(currentIndex === -1){
 
         playAudio(0);
 
         return;
-
     }
 
+    if(audio.paused){
 
-    if(player.paused){
+        audio.play();
 
-        player.play();
+        playBtn.textContent = "⏸";
 
     }else{
 
-        player.pause();
+        audio.pause();
+
+        playBtn.textContent = "▶";
 
     }
 
 }
 
-
-/* ==========================================
-   PREVIOUS
-========================================== */
+/* =========================================================
+   Previous
+========================================================= */
 
 function previousAudio(){
 
-    if(currentIndex <= 0){
+    if(currentIndex > 0){
 
-        playAudio(0);
-
-        return;
+        playAudio(currentIndex - 1);
 
     }
 
-    playAudio(
-        currentIndex - 1
-    );
-
 }
 
-
-/* ==========================================
-   NEXT
-========================================== */
+/* =========================================================
+   Next
+========================================================= */
 
 function nextAudio(){
 
-    if(
-        currentIndex >=
-        files.length - 1
-    ){
+    if(currentIndex < files.length - 1){
 
-        return;
+        playAudio(currentIndex + 1);
 
     }
 
-    playAudio(
-        currentIndex + 1
-    );
-
 }
 
-
-/* ==========================================
-   BACK 10 SECONDS
-========================================== */
+/* =========================================================
+   Backward 10 Seconds
+========================================================= */
 
 function backward10(){
 
-    if(player.src){
-
-        player.currentTime =
-            Math.max(
-                0,
-                player.currentTime - 10
-            );
-
-    }
+    audio.currentTime =
+        Math.max(0, audio.currentTime - 10);
 
 }
 
-
-/* ==========================================
-   FORWARD 10 SECONDS
-========================================== */
+/* =========================================================
+   Forward 10 Seconds
+========================================================= */
 
 function forward10(){
 
-    if(player.src){
-
-        player.currentTime =
-            Math.min(
-                player.duration || 0,
-                player.currentTime + 10
-            );
-
-    }
+    audio.currentTime =
+        Math.min(
+            audio.duration || 0,
+            audio.currentTime + 10
+        );
 
 }
 
-
-/* ==========================================
-   PROGRESS
-========================================== */
-
-player.addEventListener(
-    "loadedmetadata",
-    function(){
-
-        duration.textContent =
-            formatTime(
-                player.duration
-            );
-
-    }
-);
-
-
-player.addEventListener(
-    "timeupdate",
-    function(){
-
-        if(player.duration){
-
-            progress.value =
-                (
-                    player.currentTime /
-                    player.duration
-                ) * 100;
-
-        }
-
-
-        currentTime.textContent =
-            formatTime(
-                player.currentTime
-            );
-
-    }
-);
-
-
-progress.addEventListener(
-    "input",
-    function(){
-
-        if(player.duration){
-
-            player.currentTime =
-                (
-                    progress.value /
-                    100
-                ) *
-                player.duration;
-
-        }
-
-    }
-);
-
-
-/* ==========================================
-   VOLUME
-========================================== */
-
-volume.addEventListener(
-    "input",
-    function(){
-
-        player.volume =
-            volume.value;
-
-    }
-);
-
-
-/* ==========================================
-   AUTO NEXT
-========================================== */
-
-player.addEventListener(
-    "ended",
-    function(){
-
-        if(
-            currentIndex >= 0 &&
-            currentIndex <
-            files.length - 1
-        ){
-
-            nextAudio();
-
-        }else{
-
-            playButton.textContent =
-                "▶";
-
-        }
-
-    }
-);
-
-
-/* ==========================================
-   PLAY ICON
-========================================== */
-
-player.addEventListener(
-    "play",
-    function(){
-
-        playButton.textContent =
-            "⏸";
-
-    }
-);
-
-
-player.addEventListener(
-    "pause",
-    function(){
-
-        playButton.textContent =
-            "▶";
-
-    }
-);
-
-
-/* ==========================================
-   TIME FORMAT
-========================================== */
+/* =========================================================
+   Time
+========================================================= */
 
 function formatTime(seconds){
 
     if(!isFinite(seconds)){
-
         return "00:00";
-
     }
-
-
-    const hours =
-        Math.floor(
-            seconds / 3600
-        );
-
 
     const minutes =
-        Math.floor(
-            (seconds % 3600) / 60
-        );
-
+        Math.floor(seconds / 60);
 
     const secs =
-        Math.floor(
-            seconds % 60
-        );
+        Math.floor(seconds % 60);
 
-
-    if(hours > 0){
-
-        return (
-
-            String(hours)
-            .padStart(2,"0")
-
-            + ":" +
-
-            String(minutes)
-            .padStart(2,"0")
-
-            + ":" +
-
-            String(secs)
-            .padStart(2,"0")
-
-        );
-
-    }
-
-
-    return (
-
-        String(minutes)
-        .padStart(2,"0")
-
-        + ":" +
-
-        String(secs)
-        .padStart(2,"0")
-
-    );
+    return String(minutes).padStart(2,"0")
+        + ":"
+        + String(secs).padStart(2,"0");
 
 }
 
+/* =========================================================
+   Progress
+========================================================= */
 
-/* ==========================================
-   CHECK
-========================================== */
+audio.addEventListener("timeupdate",()=>{
 
-console.log(
-    "د تفسیر ټول MP3 فایلونه:",
-    files.length
-);
+    if(audio.duration){
+
+        progress.value =
+            (audio.currentTime / audio.duration) * 100;
+
+    }
+
+    playerTime.textContent =
+        formatTime(audio.currentTime)
+        + " / "
+        + formatTime(audio.duration);
+
+});
+
+progress.addEventListener("input",()=>{
+
+    if(audio.duration){
+
+        audio.currentTime =
+            (progress.value / 100) * audio.duration;
+
+    }
+
+});
+
+/* =========================================================
+   Volume
+========================================================= */
+
+volume.addEventListener("input",()=>{
+
+    audio.volume = volume.value;
+
+});
+
+/* =========================================================
+   When audio ends
+========================================================= */
+
+audio.addEventListener("ended",()=>{
+
+    if(currentIndex < files.length - 1){
+
+        playAudio(currentIndex + 1);
+
+    }else{
+
+        playBtn.textContent = "▶";
+
+    }
+
+});
+
+/* =========================================================
+   Loading
+========================================================= */
+
+audio.addEventListener("loadedmetadata",()=>{
+
+    progress.value = 0;
+
+    playerTime.textContent =
+        "00:00 / "
+        + formatTime(audio.duration);
+
+});
 
 </script>
 
 </body>
-    </html>
+</html>
