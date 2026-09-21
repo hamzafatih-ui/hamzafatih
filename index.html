@@ -135,51 +135,122 @@ nav a:hover{
 .card button, .card a.btn{
     display:inline-block;
     margin-top:18px;
+    border:0;
+    border-radius:25px;
+    padding:9px 22px;
+    background:#16452f;
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.card button:hover, .card a.btn:hover{
+    background:#1d5c3f;
+}
+
+.section{
+    margin-top:55px;
+    text-align:center;
+}
+
+.section h2{
+    color:#16452f;
+    margin-bottom:20px;
+}
+
+.about{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+footer{
+    margin-top:55px;
+    background:#09251b;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+footer strong{
+    color:#d7b65a;
+}
+
+@media(max-width:600px){
+    header h1{
+        font-size:30px;
+    }
+
+    .hero h2{
+        font-size:25px;
+    }
+
+    nav a{
+        font-size:13px;
+        margin:2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">☪</div>
+    <h1>حمزه فاتح</h1>
+    <div class="english">Hamza Fatih</div>
+    <div class="subtitle">
+        اسلامي علمي او نشراتي ویب پاڼه
+    </div>
+</header>
+
 <nav>
-    <a href="index.html">کور پاڼه</a>
+    <a href="index.html">کور</a>
     <a href="#books">📚 کتابونه</a>
     <a href="tafsir.html">🎧 تفسیر</a>
-    <a href="#audio">🎙️ ږغیز</a>
+    <a href="#audio">🎙️ صوتي مواد</a>
     <a href="#articles">📝 مقالې</a>
     <a href="#about">زموږ په اړه</a>
 </nav>
+}
 
 <section class="hero" id="home">
     <h2>حمزه فاتح ویب پاڼه په پښتو ژبه د pdf کتابونو، صوتي تفسیرونو او نورو دیني محتواوو وړاندې کونکی دی.</h2>
 
    <p>
-        تاسو هم خپل مطالب، د خپلو شیوخو کتابونه، صوتي تفاسیر او د احادیثو دورې مونږ ته راولیږئ
+        تاسو هم خپل مطالب، د خپلو شیوخو کتابونه، صوتي تفاسیر او دورې مونږ ته راولیږئ
     </p>
 
 </section>
-
 <div class="container">
     <div class="cards">
 
         <div class="card" id="books">
             <div class="icon">📚</div>
-            <h3> کتابونه</h3>
-            <p>PDF کتابونه </p>
+            <h3>اسلامي کتابونه</h3>
+            <p>اسلامي PDF کتابونه او علمي مطالب</p>
             <button>کتابونه وګورئ</button>
         </div>
 
         <div class="card" id="tafsir">
             <div class="icon">🎧</div>
-            <h3>د قرآنکریم </h3>
-            <p>د قرآنکریم ږغیز تفاسیر</p>
-            <a href="tafsirs.html"><button>تفسیرونه وګورئ</button></a>
+            <h3>د قرآنکریم تفسیر</h3>
+            <p>د قرآنکریم صوتي تفاسیر</p>
+           <a href="tafsirs.html"> <button>تفسیرونه وګورئ</button>
         </div>
 
         <div class="card" id="audio">
             <div class="icon">🎙️</div>
-            <h3>ږغیز</h3>
-            <p>بیانونه، درسونه او ترانې</p>
-            <button>ږغیز</button>
+            <h3>صوتي مواد</h3>
+            <p>بیانونه، درسونه او نور اسلامي صوتي مواد</p>
+            <button>صوتي مواد</button>
         </div>
 
         <div class="card" id="articles">
             <div class="icon">📝</div>
-            <h3> مقالې</h3>
+            <h3>اسلامي مقالې</h3>
             <p>اسلامي لیکنې، مقالې او ګټور معلومات</p>
             <button>مقالې وګورئ</button>
         </div>
@@ -208,4 +279,4 @@ nav a:hover{
 </footer>
 
 </body>
-    </html>
+</html>
